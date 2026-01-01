@@ -1,40 +1,22 @@
-Tic Tac Toe Game
-A Python terminal game for two players to play Tic Tac Toe.
+# Tic Tac Toe (Python Console Game)
 
-How to Play
-Run python tic_tac_toe.py
+A simple two-player Tic Tac Toe game implemented in Python, designed to run in the console or Jupyter Notebook.
 
-Player 1 chooses X or O
+## Features
+- 2-player mode
+- Players choose X or O
+- Randomly selects who goes first
+- Clean board display with screen clearing (in Jupyter)
+- Automatic win detection
+- Tie detection when board is full
+- Option to replay
 
-Game randomly decides who goes first
+## Requirements
+- Python 3
+- `IPython` (only for `clear_output` in Jupyter/Colab – optional)
 
-Players take turns choosing positions 1-9
+## How to Run
+Save the code to a file (e.g., `tic_tac_toe.py`) and run:
 
-First to get 3 in a row wins
-
-Requirements
-Python 3.x
-
-IPython library
-
-Setup
-bash
-pip install ipython
+```bash
 python tic_tac_toe.py
-Game Board
-Positions are numbered:
-
-text
-7 | 8 | 9
----------
-4 | 5 | 6
----------
-1 | 2 | 3
-Features
-Two-player gameplay
-
-Win/tie detection
-
-Replay option
-
-Input validation
