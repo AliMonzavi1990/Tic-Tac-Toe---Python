@@ -91,9 +91,11 @@ while True:
             place_marker(the_board, player1_marker, position)
 
             if win_check(the_board, player1_marker):
+                display_board(the_board)
                 print('PLAYER 1 WON THE GAME!')
                 game_on = False
             elif full_board_check(the_board):
+                display_board(the_board)
                 print('TIE GAME!')
                 game_on = False
             else:
