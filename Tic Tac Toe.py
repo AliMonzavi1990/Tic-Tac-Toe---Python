@@ -62,7 +62,19 @@ def full_board_check(board):
 def player_choice(board):
     position = 0
     while position not in range(1, 10) or not space_check(board, position):
-        position = int(input('Choose a position: (1-9) '))
+        choice = input('Choose a position (1-9): ')
+
+        if not choice.isdigit():
+            print('Please enter a valid number!')
+            continue
+
+        position = int(choice)
+
+        if position not in range(1, 10):
+            print('Your choice must be between 1 and 9!')
+        elif not space_check(board, position):
+            print('That position is already taken!')
+
     return position
 
 
@@ -110,7 +122,7 @@ while True:
                 game_on = False
             elif full_board_check(the_board):
                 print('TIE GAME!')
-                break
+                game_on = False
             else:
                 game_on = True
                 turn = 'player 1'
